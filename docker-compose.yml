@@ -1,0 +1,12 @@
+notebook:
+  image: deeptictactoe 
+  ports: ['8888:8888']
+  working_dir: '/home/jovyan/work'
+  container_name: workshop_deep_tictactoe_notebook
+
+server:
+  image: deeptictactoe
+  ports: ['5000:5000']
+  working_dir: '/home/jovyan/work'
+  command: ['start.sh', 'python', '/home/jovyan/work/tictactoe/app/app.py' ]
+  container_name: workshop_deep_tictactoe_server
